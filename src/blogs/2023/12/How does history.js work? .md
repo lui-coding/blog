@@ -146,7 +146,7 @@ function createEvents<F extends Function>(): Events<F> {
 
 ### Methods
 
-`history.js` provides three methods to create route.
+`history.js` provides three methods to create history object.
 
 ```typescript
 // BROWSER
@@ -364,7 +364,7 @@ function getNextLocation(to: To, state: any = null): Location {
 ##### allowTx & applyTx
 
 ```typescript
-// jusdge if the transcation can be applied
+// check if the transcation can be applied
 function allowTx(action: Action, location: Location, retry: () => void) {
   	// if these is no blocker, just return true
   	// else exec all blockers and return false
@@ -390,7 +390,7 @@ function applyTx(nextAction: Action, nextLocation: Location) {
 
 #### Exposed Porperties
 
-Let's proceed to see how the exposed porperties are implemented."
+Let's proceed to see how the exposed porperties are implemented.
 
 ##### action & location & index 
 
@@ -503,9 +503,9 @@ In memory mode, instead of invoking the HTML5 API, it directly manipulates the e
 
 ##### go & back & forward
 
-Cause `back` equal to `go(-1)`, `forward` equal to `go(1)` ,we just need to focus on go's implementation.
+Cause `back` equal to `go(-1)`, `forward` equal to `go(1)` ,we just need to focus on `go`'s implementation.
 
-In browser and hash mode, it simply invokes the HTML5 `go`. However, in memory mode, it invokes `allowTx` and `applyTx`. This distinction arises because `go` triggers an event called 'popState' in the browser environment, and we'll discuss this later.
+In browser and hash mode, it simply invokes the HTML5 `go`. However, in memory mode, it invokes `allowTx` and `applyTx`. This distinction arises because `go` triggers an event called 'popstate' in the browser environment, and we'll discuss this later.
 
 ```typescript
 // in createBrowserHistory and createMemeryHistory 
@@ -612,7 +612,7 @@ function handlePop() {
       blockers.call(blockedPopTx);
       blockedPopTx = null;
     } else {
-      // When the code reaches this point, the browser's location has changed, allowing us to retrieve the next index and location.
+      // When the code reaches this point, the browser's location has changed, allowing us to retrieve the next index and Location.
 			// To be explicit, 'next' has no relation to the direction; going back can also be 	treated as 'next'.
 			
       let nextAction = Action.Pop;
@@ -692,7 +692,7 @@ function handlePop() {
 
 `history.js` is a minimal yet crucial library for React Router. It implements both hash router and browser router through the secondary encapsulation of HTML5 history APIs. Additionally, it offers a simulation for non-browser environments such as Node and React Native, ensuring compatibility across different platforms. By utilizing a transaction and events mode, it empowers users to block URL changes and exec extra task when the URL changes. 
 
-**Thank you for reading!😋** 
+**Thanks for reading!😋** 
 
 
 
