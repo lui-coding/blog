@@ -2,9 +2,12 @@ import { createBrowserRouter } from "react-router-dom";
 import About from "./pages/About";
 import Blogs from "./pages/Blogs";
 import Music from "./pages/Music";
+import Layout from "./components/Layout";
+
 const router = createBrowserRouter([
   {
     path: "/",
+    element: <Layout />,
     children: [
       {
         index: true,
