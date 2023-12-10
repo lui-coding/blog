@@ -1,5 +1,7 @@
+import { RouterProvider } from "react-router-dom";
 import "./App.css";
+import router from "./route";
 
 export default function App() {
-  return <h1 className="bg-zinc-800 flex-1">Hello world!</h1>;
+  return <RouterProvider router={router} />;
 }
