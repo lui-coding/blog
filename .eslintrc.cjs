@@ -2,6 +2,9 @@ module.exports = {
   root: true,
   env: { browser: true, es2020: true },
   extends: [
+    "airbnb",
+    "airbnb/hooks",
+    "airbnb-typescript",
     "eslint:recommended",
     "plugin:@typescript-eslint/recommended-type-checked",
     "plugin:react-hooks/recommended",
@@ -16,6 +19,7 @@ module.exports = {
       "warn",
       { allowConstantExport: true },
     ],
+     "import/no-extraneous-dependencies": "off",
   },
   parserOptions: {
     ecmaVersion: "latest",

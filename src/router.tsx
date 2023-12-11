@@ -1,12 +1,12 @@
-import { createBrowserRouter } from "react-router-dom";
-import About from "./pages/About";
-import Blogs from "./pages/Blogs";
-import Music from "./pages/Music";
-import Layout from "./components/Layout";
+import { createBrowserRouter } from 'react-router-dom';
+import About from './pages/About';
+import Blogs from './pages/Blogs';
+import Music from './pages/Music';
+import Layout from './components/Layout';
 
 const router = createBrowserRouter([
   {
-    path: "/",
+    path: '/',
     element: <Layout />,
     children: [
       {
@@ -14,11 +14,11 @@ const router = createBrowserRouter([
         element: <About />,
       },
       {
-        path: "blogs",
+        path: 'blogs',
         element: <Blogs />,
       },
       {
-        path: "music",
+        path: 'music',
         element: <Music />,
       },
     ],

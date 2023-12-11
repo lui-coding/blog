@@ -1,15 +1,17 @@
 # Features
-* About
-* Blog
+
+- About
+- Blog
   - list
   - [ ] markdown preview minimum viable product
-* Music 
-  - [ ] list  
+- Music
+  - [ ] list
   - [ ] palyer
-* Tag System
-* Time line
+- Tag System
+- Time line
 
-# Tech 
+# Tech
+
 - [ ] static website
 - [ ] systematize style
 - [ ] nest.js

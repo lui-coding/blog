@@ -1,10 +1,24 @@
-import { NavLink } from "react-router-dom";
+import { NavLink } from 'react-router-dom';
+
+const navgations = [
+  {
+    name: 'Blogs',
+    to: 'blogs',
+  },
+  {
+    name: 'Music',
+    to: 'music',
+  },
+];
 
 export default function Nav() {
   return (
-    <nav>
-      <NavLink to="blogs">Blogs</NavLink>
-      <NavLink to="music">Music</NavLink>
+    <nav className="">
+      {navgations.map(({ to, name }) => (
+        <NavLink key={name} to={to}>
+          {name}
+        </NavLink>
+      ))}
     </nav>
   );
 }
