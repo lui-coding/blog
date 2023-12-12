@@ -1,10 +1,10 @@
 import { Outlet } from 'react-router-dom';
-import Header from '../Header';
 import Footer from '../Footer';
+import Header from '../Header';
 
 export default function Layout() {
   return (
-    <div className="text-slate-50 bg-black container min-h-screen">
+    <div className="h-screen leading-normal bg-charade-50 text-black dark:bg-charade-950 dark:text-gray ">
       <Header />
       <Outlet />
       <Footer />
