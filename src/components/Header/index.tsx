@@ -1,5 +1,6 @@
 import { Link, NavLink } from 'react-router-dom';
 import useDarkSide from '../../hooks/useDarkSide';
+import Logo from './Logo';
 
 const navgations = [
   {
@@ -16,7 +17,9 @@ const navgations = [
 function Nav() {
   return (
     <div className="flex-1 flex justify-between content-center">
-      <Link to="/">#LUI</Link>
+      <Link to="/">
+        <Logo />
+      </Link>
       <nav className="space-x-28">
         {navgations.map(({ to, name }) => (
           <NavLink
