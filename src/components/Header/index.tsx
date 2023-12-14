@@ -4,8 +4,8 @@ import Logo from './Logo';
 
 const navgations = [
   {
-    name: 'Blogs',
-    to: 'blogs',
+    name: 'Blog',
+    to: 'blog',
   },
   {
     name: 'Music',
@@ -39,7 +39,7 @@ export default function Header() {
   const [theme, switchSheme] = useDarkSide();
 
   return (
-    <header className="border-2 h-24 flex justify-between px-3 py-5  items-center">
+    <header className=" h-24 flex justify-between px-3 py-5  items-center">
       <Nav />
       <div className="ml-16 mr-3">
         <button onClick={switchSheme} type="button">{theme}</button>
