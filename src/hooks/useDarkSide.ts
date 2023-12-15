@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { useUpdateEffect } from 'react-use';
 
 const initTheme = () => {
@@ -19,15 +19,8 @@ type Theme = 'dark' | 'light';
 export default function useDarkSide():[Theme, () => void] {
   const [theme, setTheme] = useState<Theme>(initTheme);
 
-  useEffect(() => {
-    if (theme === 'dark') {
-      document.documentElement.classList.add('dark');
-    } else {
-      document.documentElement.classList.remove('dark');
-    }
-  }, [theme]);
-
   useUpdateEffect(() => {
+    document.documentElement.classList.toggle('dark');
     localStorage.setItem('theme', theme);
   }, [theme]);
 

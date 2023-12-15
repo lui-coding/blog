@@ -1,3 +1,13 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+@layer base {
+  :root {
+
+  }
+  :root.dark {
+    @apply bg-cyan-950;
+  }
+}

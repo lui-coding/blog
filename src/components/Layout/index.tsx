@@ -4,7 +4,7 @@ import Header from '../Header';
 
 export default function Layout() {
   return (
-    <div className="h-screen leading-normal bg-charade-50 text-black dark:bg-charade-950 dark:text-gray ">
+    <div className="h-screen">
       <Header />
       <Outlet />
       <Footer />

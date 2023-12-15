@@ -1,10 +1,13 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
+    <script>
+      !(function () { const e = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches; const t = localStorage.getItem("theme") || "auto"; (t === "dark" || (e && t !== "light")) && document.documentElement.classList.toggle("dark", !0); })();
+    </script>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite + React + TS</title>
+    <title>Lui</title>
   </head>
   <body>
     <div id="root"></div>
