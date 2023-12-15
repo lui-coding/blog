@@ -1,0 +1,31 @@
+:root {
+  --size: 20px;
+}
+
+.mode-trigger {
+  font-size: 0;
+}
+.trigger {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  display: block;
+  width: var(--size);
+  height: var(--size);
+  border: none;
+  margin: 0;
+  padding: 0;
+  border-radius: 100%;
+  box-shadow: inset var(--size) calc(-1 * var(--size)) #edaa32;
+  @apply shadow-orange-800/50;
+  border-radius: 50%;
+  cursor: pointer;
+  overflow: hidden;
+  transition: box-shadow 0.6s;
+}
+.trigger:checked {
+  box-shadow: inset calc(var(--size) * 0.3) calc(var(--size) * -0.25) #edaa32;
+  @apply shadow-orange-shadow-orange-800/50;
+  transition: box-shadow 0.6s;
+}

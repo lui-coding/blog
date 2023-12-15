@@ -1,5 +1,5 @@
 import { Link, NavLink } from 'react-router-dom';
-import useDarkSide from '../../hooks/useDarkSide';
+import DarkModeSwitch from './DarkModeSwitch';
 import Logo from './Logo';
 
 const navgations = [
@@ -16,7 +16,7 @@ const navgations = [
 
 function Nav() {
   return (
-    <div className="flex-1 flex justify-between content-center">
+    <div className="flex-1 flex justify-between content-center items-center">
       <Link to="/">
         <Logo />
       </Link>
@@ -36,13 +36,11 @@ function Nav() {
 }
 
 export default function Header() {
-  const [theme, switchSheme] = useDarkSide();
-
   return (
     <header className=" h-24 flex justify-between px-3 py-5  items-center">
       <Nav />
       <div className="ml-16 mr-3">
-        <button onClick={switchSheme} type="button">{theme}</button>
+        <DarkModeSwitch />
       </div>
     </header>
   );
