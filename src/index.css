@@ -18,7 +18,8 @@
   }
 
   .transaction-bgc {
-    transition: background-color 1s;
+    transition-property: background-color, color;
+    transition-duration: 1s;
   }
 }
 
